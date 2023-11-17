@@ -1,19 +1,17 @@
 #include "main.h"
 
 /**
- * print_hex - converts to hexadecimal
- * @val: argument to be converted
- *
+ * print_hex_ex - converts to hex
+ * @num: Argument to be converted
  * Return: counter
  */
 
-int print_hex(va_list val)
+int print_hex_ex(unsigned long int num)
 {
-	int i;
-	int *array;
-	int counter = 0;
-	unsigned int num = va_arg(val, unsigned int);
-	unsigned int tem = num;
+	long int i;
+	long int *array;
+	long int counter = 0;
+	unsigned long int temp = num;
 
 	while (num / 16 != 0)
 	{
@@ -21,12 +19,12 @@ int print_hex(va_list val)
 		counter++;
 	}
 	counter++;
-	array = malloc(counter * sizeof(int));
+	array = malloc(counter * sizeof(long int));
 
 	for (i = 0; i < counter; i++)
 	{
-		array[i] = tem % 16;
-		tem /= 16;
+		array[i] = temp % 16;
+		temp = temp / 16;
 	}
 	for (i = counter - 1; i >= 0; i--)
 	{

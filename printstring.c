@@ -28,4 +28,5 @@ int print_string(va_list val)
 		for (i = 0; i < len; i++)
 			_putchar(str[i]);
 		return (len);
+	}
 }

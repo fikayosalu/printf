@@ -1,18 +1,16 @@
 #include "main.h"
 
 /**
- * print_HEX - converts to hexadecimal
- * @val: argument to be converted
+ * print_HEX_ex - converts unsigned int to hexadecimal
+ * @num: argument to be converted
  *
  * Return: counter
  */
-
-int print_HEX(va_list val)
+int print_HEX_ex(unsigned int num)
 {
 	int i;
 	int *array;
 	int counter = 0;
-	unsigned int num = va_arg(val, unsigned int);
 	unsigned int tem = num;
 
 	while (num / 16 != 0)

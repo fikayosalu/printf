@@ -9,9 +9,9 @@
 
 int print_char(va_list val)
 {
-	char str;
+	char s;
 
-	str = va_arg(val, int);
-	_putchar(str);
+	s = va_arg(val, int);
+	_putchar(s);
 	return (1);
 }

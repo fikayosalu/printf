@@ -11,7 +11,7 @@ int print_int(va_list args)
 {
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
-	int i = 1;
+	int  i = 1;
 
 	n = n / 10;
 	num = n;
@@ -44,23 +44,20 @@ int print_int(va_list args)
 	_putchar(last + '0');
 
 	return (i);
-
 }
 
-
-include "main.h"
 /**
- * print_dec -prints decimal
+ * print_dec - prints decimal
  * @args: argument to print
- *
- * Return: number of characters printed
+ * Return: integer
  */
 
 int print_dec(va_list args)
 {
 	int n = va_arg(args, int);
-	int num, last = n % 10, digit, exp = 1;
-	int i = 1;
+	int num, last = n % 10, digit;
+	int  i = 1;
+	int exp = 1;
 
 	n = n / 10;
 	num = n;
@@ -94,3 +91,4 @@ int print_dec(va_list args)
 
 	return (i);
 }
+
